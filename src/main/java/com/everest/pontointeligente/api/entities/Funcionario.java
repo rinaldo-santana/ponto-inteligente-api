@@ -46,20 +46,20 @@ public class Funcionario  implements Serializable {
 	@Column(name = "cpf", nullable = false)
 	private String cpf;
 	
-	@Column(name = "valor_hora", nullable = false)
+	@Column(name = "valor_hora", nullable = true)
 	private BigDecimal valorHora;
 	
-	@Column(name = "qtd_hora_trabalho_dia", nullable = false)
+	@Column(name = "qtd_horas_trabalho_dia", nullable = true)
 	private Float qtdHorasTrabalhoDia;
 	
-	@Column(name = "qtd_hora_almoco", nullable = false)
+	@Column(name = "qtd_horas_almoco", nullable = true)
 	private Float qtdHorasAlmoco;
 	
-	@Column(name = "perfil", nullable = false)
+	@Column(name = "perfil", nullable = true)
 	@Enumerated(EnumType.STRING)
 	private PerfilEnum perfil;
 	
-	@Column(name = "data_cricacao", nullable = false)
+	@Column(name = "data_criacao", nullable = false)
 	private Date dataCriacao;
 	
 	@Column(name = "data_atualizacao", nullable = false)
