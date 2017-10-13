@@ -31,13 +31,13 @@ public class Lancamento  implements Serializable {
 	private Long id;
 	
 	@Temporal(TemporalType.TIMESTAMP)
-	@Column(name = "data", nullable = false)
+	@Column(name = "data", nullable = true)
 	private Date data;
 	
-	@Column(name = "descricao", nullable = false)
+	@Column(name = "descricao", nullable = true)
 	private String descricao;
 
-	@Column(name = "localizacao", nullable = false)
+	@Column(name = "localizacao", nullable = true)
 	private String localizacao;
 	
 	@Column(name = "data_criacao", nullable = false)

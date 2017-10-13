@@ -1,6 +1,7 @@
 package com.everest.pontointeligente.api.repositories;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 import java.math.BigDecimal;
 
@@ -42,7 +43,7 @@ public class FuncionarioRepositoryTest {
 
 	@After
 	public void tearDown() {
-		this.funcionarioRepository.deleteAll();
+		this.empresaRepository.deleteAll();
 	}
 	
 	@Test
