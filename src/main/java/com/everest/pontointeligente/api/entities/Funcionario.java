@@ -76,16 +76,16 @@ public class Funcionario  implements Serializable {
 	}
 	
 	@Transient
-	public Optional<BigDecimal> getHoraTrabalhadaOpt(){
+	public Optional<BigDecimal> getValorHoraOpt(){
 		return Optional.ofNullable(this.valorHora);
 	}
 
-	@Transient
-	public Optional<Float> getQtdHorasTrabalhadaDiaOpt(){
+	@Transient             
+	public Optional<Float> getQtdHorasTrabalhoDiaOpt(){
 		return Optional.ofNullable(this.qtdHorasTrabalhoDia);
 	}
 
-	@Transient
+	@Transient             
 	public Optional<Float> getQtdHorasAlmocoOpt(){
 		return Optional.ofNullable(this.qtdHorasAlmoco);
 	}

@@ -106,6 +106,6 @@ public class CadastroPessoaJuridicaController {
 				result.addError(new ObjectError("funcionario", "CPF já existe")));	
 		
 		this.funcionarioService.buscarPorEmail(pessoaJuridicaDto.getEmail()).ifPresent(func -> 
-		result.addError(new ObjectError("funcionario", "Email já existe")));	
+				result.addError(new ObjectError("funcionario", "Email já existe")));	
 	}
 }
