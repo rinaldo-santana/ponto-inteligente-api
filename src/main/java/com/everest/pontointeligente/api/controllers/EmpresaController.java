@@ -6,6 +6,7 @@ import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -67,14 +68,11 @@ public class EmpresaController {
 			response.getErros().add("Empresa não existe para o cnpj: " + cnpj);
 			return ResponseEntity.badRequest().body(response);
 		}
-		
-		
-		
+				
 		response.setData(this.converveterEmpresaParaEmpresaDto(empresa.get()));
 		
 		return ResponseEntity.ok().body(response);
 	}
-	
 	
 
 	private EmpresaDto converveterEmpresaParaEmpresaDto(Empresa empresa) {
@@ -95,6 +93,5 @@ public class EmpresaController {
 		
 		return empresa;
 	}
-
 
 }
