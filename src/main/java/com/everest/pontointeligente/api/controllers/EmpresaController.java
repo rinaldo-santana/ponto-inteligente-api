@@ -4,9 +4,13 @@ import java.util.Optional;
 
 import javax.validation.Valid;
 
+import com.everest.pontointeligente.api.dtos.EmpresaDto;
+import com.everest.pontointeligente.api.entities.Empresa;
+import com.everest.pontointeligente.api.response.Response;
+import com.everest.pontointeligente.api.services.EmpresaService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -16,11 +20,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import com.everest.pontointeligente.api.dtos.EmpresaDto;
-import com.everest.pontointeligente.api.entities.Empresa;
-import com.everest.pontointeligente.api.response.Response;
-import com.everest.pontointeligente.api.services.EmpresaService;
 
 @RestController
 @RequestMapping("/api/empresas")
